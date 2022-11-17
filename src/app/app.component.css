@@ -1,0 +1,14 @@
+#leftbox {
+    float:left; 
+    background: grey;
+    width:450px;
+    height:500px;
+}
+
+#rightbox{
+    margin-left: 10px;
+    float:left;
+    background: grey;
+    width: 450px;
+    height:500px;
+}

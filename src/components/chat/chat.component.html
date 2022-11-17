@@ -1,0 +1,12 @@
+<h1>{{user.name}}</h1>
+<div class="dialogClass">
+    <div class="boxClass" *ngFor="let message of conversation.messages" >
+        <p class="boxRightClass" *ngIf="user.name === message.author.name">{{message.message}}</p>
+        <p class="boxLeftClass" *ngIf="user.name !== message.author.name">{{message.message}}</p>
+        
+    </div>
+</div>
+<form #chatForm="ngForm" (ngSubmit)="send(chatForm)">
+    <input type="text" [(ngModel)]="msg.message" name="msg" autocomplete="off">
+    <button type="submit">OK</button>
+</form>
